@@ -11,11 +11,21 @@
 	<h:head />
 	<h:body>
 		<h:form >
-		    <h:inputText value="#{alumno.idAlumno}" required="true" />
-		    <h:inputText value="#{alumno.nombre}" required="true" />
-		    <h:inputText value="#{alumno.apellido}" required="true" />
-		    <h:inputText value="#{alumno.dni}"  />
-    
+		
+		<h:panelGrid id="alumno" columns="1" border="0" cellpadding="10">
+			<h:outputLabel value="IdAlumno" />
+		    <h:inputText id="idAlumno" value="#{alumno.idAlumno}" required="true" validatorId="com.fihoca.util.FieldsValidator" label="idAlumno" />
+		    <h:message for="idAlumno" style="color:red" />
+		    <h:outputLabel value="Nombre" />
+		    <h:inputText id="nombre" value="#{alumno.nombre}" validatorId="com.fihoca.util.FieldsValidator" required="true" label="Nombre" />
+		    <h:message for="nombre" style="color:red" />
+		    <h:outputLabel value="Apellido" />
+		    <h:inputText id="apellido" value="#{alumno.apellido}" validatorId="com.fihoca.util.FieldsValidator" required="true" label="Apellidos" />
+		    <h:message for="apellido" style="color:red" />
+		    <h:outputLabel value="DNI" />
+		    <h:inputText id="dni" value="#{alumno.dni}" required="true" validatorId="com.fihoca.util.FieldsValidator" label="DNI"  />
+		     <h:message for="dni" style="color:red" />
+			</h:panelGrid>    
    <h:commandButton value="Submit" type="submit" action="#{alumno.add}"  />
    
  

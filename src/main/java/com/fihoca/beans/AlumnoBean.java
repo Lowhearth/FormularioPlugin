@@ -36,8 +36,6 @@ public class AlumnoBean implements Serializable {
 		
 	}
 	public String add(){
-		System.out.println("adding");
-		System.out.println(nombre);
 		Alumno alumno = new Alumno();
 		alumno.setIdAlumno(idAlumno);
 		alumno.setNombre(nombre);

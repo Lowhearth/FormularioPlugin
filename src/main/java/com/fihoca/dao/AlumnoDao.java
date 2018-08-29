@@ -27,19 +27,34 @@ public class AlumnoDao implements IDao<Alumno> {
 		
 		
 	
-	    JAXBContext jaxbContext;
-		try {
-			Alumnos alumnos =readFile();
-			jaxbContext = JAXBContext.newInstance(Alumnos.class);
+	    
+	    try {
+	    	JAXBContext jaxbContext;
+		    jaxbContext = JAXBContext.newInstance(Alumnos.class);
 			 Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-			    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			   jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+	    if(file.exists()){
+		
+			Alumnos alumnos =readFile();
+			
 			    alumnos.getAlumnos().add(alumno);
 			    jaxbMarshaller.marshal(alumnos, file);
 			    jaxbMarshaller.marshal(alumnos, System.out);
-		} catch (JAXBException e) {
+		} else{
+			Alumnos alumnos = new Alumnos();
+			   alumnos.getAlumnos().add(alumno);
+			    jaxbMarshaller.marshal(alumnos, file);
+			    jaxbMarshaller.marshal(alumnos, System.out);
+			
+		}
+	    }catch (JAXBException e) {
 			
 			e.printStackTrace();
-		}
+	    
+	    	
+	    }
+	    
+	    
 	   
 	    
 		return null;
