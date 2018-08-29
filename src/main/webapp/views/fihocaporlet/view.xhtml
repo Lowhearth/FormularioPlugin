@@ -10,13 +10,13 @@
 >
 	<h:head />
 	<h:body>
-		<h:form id="form">
+		<h:form >
 		    <h:inputText value="#{alumno.idAlumno}" required="true" />
 		    <h:inputText value="#{alumno.nombre}" required="true" />
 		    <h:inputText value="#{alumno.apellido}" required="true" />
-		    <h:inputText value="#{alumno.dni}" required="true" />
+		    <h:inputText value="#{alumno.dni}"  />
     
-   <h:commandButton value="Submit" type="submit"  immediate="true" action="#{alumno.add}"  />
+   <h:commandButton value="Submit" type="submit" action="#{alumno.add}"  />
    
  
    

@@ -7,7 +7,7 @@ import javax.faces.bean.RequestScoped;
 import com.fihoca.dao.AlumnoDao;
 import com.fihoca.pojos.Alumno;
 
-@ManagedBean(name="alumno", eager = true)
+@ManagedBean(name="alumno")
 @RequestScoped
 
 public class AlumnoBean implements Serializable {
@@ -20,8 +20,21 @@ public class AlumnoBean implements Serializable {
 	private String dni;
 	private AlumnoDao alumnoDao = new AlumnoDao();
 	
+	
+	
 
 	
+	public AlumnoBean(int idAlumno, String nombre, String apellido, String dni, AlumnoDao alumnoDao) {
+		super();
+		this.idAlumno = idAlumno;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.dni = dni;
+		this.alumnoDao = alumnoDao;
+	}
+	public AlumnoBean(){
+		
+	}
 	public String add(){
 		System.out.println("adding");
 		System.out.println(nombre);
