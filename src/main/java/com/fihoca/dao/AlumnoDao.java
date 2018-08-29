@@ -1,5 +1,6 @@
 package com.fihoca.dao;
 
+import static com.fihoca.util.FileManager.*;
 import java.io.File;
 
 import javax.xml.bind.JAXBContext;
@@ -14,13 +15,18 @@ import com.fihoca.pojos.Alumnos;
 
 public class AlumnoDao implements IDao<Alumno> {
 	
+	static String path = "Alumno.xml";
+	static File file = null;
 	
+	static{
+		file = createFile(path);
+	}
 
 
 	public Alumno add(Alumno alumno) {
 		
 		
-		File file = new File("Alumno.xml");
+	
 	    JAXBContext jaxbContext;
 		try {
 			Alumnos alumnos =readFile();
