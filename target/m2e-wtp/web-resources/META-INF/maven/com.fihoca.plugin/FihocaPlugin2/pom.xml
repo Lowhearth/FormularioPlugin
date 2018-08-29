@@ -14,7 +14,10 @@
 		<liferay.app.server.deploy.dir>C:\Users\User\Desktop\Liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps</liferay.app.server.deploy.dir>
 		<liferay.app.server.lib.global.dir>C:\Users\User\Desktop\Liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\lib\ext</liferay.app.server.lib.global.dir>
 		<liferay.app.server.portal.dir>C:\Users\User\Desktop\Liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps\ROOT</liferay.app.server.portal.dir>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
+
 	
 	<build>
 		<plugins>
