@@ -18,6 +18,23 @@
 		
 	</portlet>
 	
+	<portlet>
+		<portlet-name>StudentViewer</portlet-name>
+		<icon>/icon.png</icon>
+		<control-panel-entry-category>my</control-panel-entry-category>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		
+		<control-panel-entry-weight>1.5</control-panel-entry-weight>
+		<instanceable>true</instanceable>
+		<requires-namespaced-parameters>
+			false
+		</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>studentviewer-portlet</css-class-wrapper>
+	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
 		<role-link>Administrator</role-link>

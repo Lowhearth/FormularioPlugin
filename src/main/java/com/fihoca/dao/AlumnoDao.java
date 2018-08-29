@@ -17,8 +17,10 @@ public class AlumnoDao implements IDao<Alumno> {
 	
 	static String path = "Alumno.xml";
 	static File file = null;
+	JAXBContext jaxbContext = null;
 	
 	static{
+		
 		file = createFile(path);
 	}
 
@@ -29,15 +31,15 @@ public class AlumnoDao implements IDao<Alumno> {
 	
 	    
 	    try {
-	    	JAXBContext jaxbContext;
-		    jaxbContext = JAXBContext.newInstance(Alumnos.class);
+	    	
+	    	JAXBContext jaxbContext = JAXBContext.newInstance(Alumnos.class);
 			 Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			   jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			   
 	    if(file.exists()){
 		
-			Alumnos alumnos =readFile();
-			
-			    alumnos.getAlumnos().add(alumno);
+				Alumnos alumnos =readFile();
+				alumnos.getAlumnos().add(alumno);
 			    jaxbMarshaller.marshal(alumnos, file);
 			    jaxbMarshaller.marshal(alumnos, System.out);
 		} else{
