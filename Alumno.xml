@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alumnos>
+    <alumno>
+        <apellido>Vilanova</apellido>
+        <dni>4658455-R</dni>
+        <idAlumno>1</idAlumno>
+        <nombre>Daniel</nombre>
+    </alumno>
+    <alumno>
+        <apellido>kjlksaf</apellido>
+        <dni>fasg455-R</dni>
+        <idAlumno>2</idAlumno>
+        <nombre>AFSklj</nombre>
+    </alumno>
+    <alumno>
+        <apellido>Vilanova</apellido>
+        <dni>4658455-R</dni>
+        <idAlumno>1</idAlumno>
+        <nombre>Daniel</nombre>
+    </alumno>
+</alumnos>
