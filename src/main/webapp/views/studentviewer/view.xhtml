@@ -10,16 +10,28 @@
 >
 	<h:head />
 	<h:body>
-	
+		#{alumnos.setAlumnos()}
 		<h:dataTable value="#{alumnos.alumnos}" var="o"
     			styleClass="order-table"
     			headerClass="order-table-header"
     			rowClasses="order-table-odd-row,order-table-even-row"
     		>
-
+				<h:column>
+    				<f:facet name="header">ID</f:facet>
+    				#{o.idAlumno}
+    			</h:column>
     			<h:column>
-    				<f:facet name="header">Order No</f:facet>
+    				<f:facet name="header">Nombre</f:facet>
     				#{o.nombre}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Apellido</f:facet>
+    				#{o.apellido}
+    			</h:column>
+    			<h:column>
+    				<f:facet name="header">DNI</f:facet>
+    				#{o.dni}
     			</h:column>
     			
     			

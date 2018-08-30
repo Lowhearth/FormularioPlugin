@@ -16,18 +16,26 @@ import static com.fihoca.util.FileManager.readFile;
 @RequestScoped
 public class AlumnosBean implements Serializable{
 
-	private final long serialVersionUID = 1L;
-	private  Alumno[] alumnos =  readFile().getAlumnos().toArray();
-	private String path="Alumnos.xml";
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	
+	private Alumno[] alumnos = null;
 	
 	
 	public Alumno[] getAlumnos() {
 		System.out.println("hi");
-		return alumnos;
+		return  alumnos;
 	}
 
-	public void setAlumnos(Alumno[] alumnos) {
-		this.alumnos = alumnos;
+	public void setAlumnos() {
+		this.alumnos = readFile().getAlumnos().toArray(new Alumno[readFile().getAlumnos().size()]);
+	}
+	
+	public  Alumno[] retrieveAlumnos(){
+		return (Alumno []) readFile().getAlumnos().toArray();
 	}
 	
 	
