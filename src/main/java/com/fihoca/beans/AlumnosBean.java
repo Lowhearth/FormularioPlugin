@@ -22,13 +22,11 @@ public class AlumnosBean implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	
 	private Alumno[] alumnos = null;
 	
 	
 	public Alumno[] getAlumnos() {
-		System.out.println("hi");
+		setAlumnos();
 		return  alumnos;
 	}
 
@@ -36,9 +34,7 @@ public class AlumnosBean implements Serializable{
 		this.alumnos = readFile().getAlumnos().toArray(new Alumno[readFile().getAlumnos().size()]);
 	}
 	
-	public  Alumno[] retrieveAlumnos(){
-		return (Alumno []) readFile().getAlumnos().toArray();
-	}
+	
 	
 	
 	
