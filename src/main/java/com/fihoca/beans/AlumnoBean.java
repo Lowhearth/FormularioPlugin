@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import com.fihoca.dao.AlumnoDao;
-import com.fihoca.pojos.Alumno;
+import com.xmlreader.dao.*;
+import com.xmlreader.pojos.*;
 
 @ManagedBean(name="alumno")
 @RequestScoped

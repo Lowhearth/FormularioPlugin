@@ -4,13 +4,15 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fihoca.pojos.*;
+
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
+import com.xmlreader.dao.*;
+import com.xmlreader.pojos.*;
 
-import static com.fihoca.util.FileManager.readFile;
+import static com.xmlreader.util.FileManager.readFile;
 
 @ManagedBean(name="alumnos")
 @RequestScoped
